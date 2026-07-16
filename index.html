@@ -218,21 +218,11 @@
       <div class="app">
         <div class="row">
           <span class="mark" style="background:var(--navy)"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span>
-          <h3>Sy-nc</h3>
+          <h3>Sales Sy-nc</h3>
           <span class="status live">Live</span>
         </div>
-        <p>Lead management, and the connected hub the whole family plugs into. Pulls every enquiry from Gmail, Outlook and Checkatrade into one place, scores them with AI, so you never miss a job worth winning.</p>
+        <p>Leads, quotes, calendar &amp; reporting — and the connected hub the whole family plugs into. Pulls every enquiry from Gmail, Outlook and Checkatrade into one place, scores it with AI, and turns quotes into booked jobs without the chasing falling on you.</p>
         <a href="https://sy-nc.app" class="btn btn-primary" style="margin-top:18px;text-align:center;width:100%">Get started</a>
-      </div>
-
-      <div class="app">
-        <div class="row">
-          <span class="mark" style="background:var(--teal)"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></span>
-          <h3>Sales Sy-nc</h3>
-          <span class="status soon">Coming soon</span>
-        </div>
-        <p>Your CRM and sales pipeline. AI-assisted quotes, automatic follow-ups and client chasing — so quotes turn into booked jobs without the chasing falling on you.</p>
-        <button class="vote-btn" data-app="Sales Sy-nc" onclick="voteApp(this)">▲ Vote to build next <span class="vcount"></span></button>
       </div>
 
       <div class="app">
@@ -293,26 +283,6 @@
         </div>
         <p>Automated competitor and market tracking — trends, updates and Google positioning so you're never caught off guard.</p>
         <button class="vote-btn" data-app="Market Sy-nc" onclick="voteApp(this)">▲ Vote to build next <span class="vcount"></span></button>
-      </div>
-
-      <div class="app">
-        <div class="row">
-          <span class="mark" style="background:var(--coral)"><svg viewBox="0 0 24 24"><path d="M6 2L4 6v14a2 2 0 002 2h12a2 2 0 002-2V6l-2-4zM4 6h16M16 10a4 4 0 01-8 0"/></svg></span>
-          <h3>Product Sy-nc</h3>
-          <span class="status soon">Coming soon</span>
-        </div>
-        <p>E-commerce, connected — link your online store, trigger automation from orders, and join up Amazon, Shopify and dropship ordering.</p>
-        <button class="vote-btn" data-app="Product Sy-nc" onclick="voteApp(this)">▲ Vote to build next <span class="vcount"></span></button>
-      </div>
-
-      <div class="app">
-        <div class="row">
-          <span class="mark" style="background:var(--teal)"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>
-          <h3>Account Mgmt Sy-nc</h3>
-          <span class="status soon">Coming soon</span>
-        </div>
-        <p>Keep customers for the long haul — contract timelines, review prompts and regular check-ins that nurture every relationship.</p>
-        <button class="vote-btn" data-app="Account Mgmt Sy-nc" onclick="voteApp(this)">▲ Vote to build next <span class="vcount"></span></button>
       </div>
 
       <div class="app">
@@ -495,7 +465,9 @@
   }
 
   function renderLeaderboard(counts){
-    var entries = Object.keys(counts).map(function(k){return [k, counts[k]];}).filter(function(e){return e[1]>0;});
+    var current = {};
+    document.querySelectorAll('.vote-btn').forEach(function(b){ current[b.dataset.app] = true; });
+    var entries = Object.keys(counts).map(function(k){return [k, counts[k]];}).filter(function(e){return e[1]>0 && current[e[0]];});
     if(!entries.length) return;
     entries.sort(function(a,b){return b[1]-a[1];});
     var lb = document.getElementById('leaderboard');
