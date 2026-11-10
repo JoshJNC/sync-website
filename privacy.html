@@ -111,7 +111,7 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <p>Last updated: 12 August 2026</p>
+    <p>Last updated: 10 November 2026</p>
   </div>
 </section>
 
@@ -142,7 +142,7 @@
     <ul>
       <li>detect, organise, and manage your leads;</li>
       <li>sync booked jobs to your connected calendar;</li>
-      <li>send transactional emails on your behalf (for example replies, quotes, team invitations, and assignment notifications);</li>
+      <li>create draft replies and quotes in your own mailbox for you to review and send (Sy-nc only sends a message when you click Send, or when you have switched on automatic follow-ups), and send account notifications such as team invitations from our own address;</li>
       <li>provide AI-assisted features such as identifying which incoming emails are genuine job enquiries and drafting suggested replies (see Section 4);</li>
       <li>process your subscription and send service-related notifications;</li>
       <li>secure the Service and comply with our legal obligations.</li>
@@ -172,14 +172,14 @@
     <p><strong>Disconnecting and deletion.</strong> Disconnecting a Page removes Sy-nc&rsquo;s access credentials immediately and stops all message capture. You may delete captured messages and leads at any time in the app, and deleting your Sy-nc account removes all associated data. If you ask Facebook to delete data an app holds about you, Meta notifies our data deletion endpoint and we permanently remove your Facebook connection data and credentials; the status of your request is confirmed at the link Meta provides.</p>
 
     <h2>5. AI processing</h2>
-    <p>To identify which incoming emails are genuine job enquiries and to draft suggested replies, Sy-nc sends the relevant email content (such as the subject, sender, and a short preview) to Google&rsquo;s Gemini API for processing. This is used <strong>only</strong> to provide these features in real time. This content is <strong>not</strong> used to train AI or machine-learning models, consistent with the Limited Use requirements above. <em>[Confirm your Gemini API is on a tier where prompt content is not used for model training, e.g. the paid Gemini API or Vertex AI, and update this section to name the service used.]</em></p>
+    <p>To identify which incoming emails are genuine job enquiries and to draft suggested replies, Sy-nc sends the relevant email content (such as the subject, sender, and a short preview) to Google&rsquo;s Gemini API for processing. This is used <strong>only</strong> to provide these features in real time. This content is <strong>not</strong> used to train AI or machine-learning models, consistent with the Limited Use requirements above. Sy-nc uses the paid Gemini API, under which Google does not use prompt content to train or improve its models.</p>
 
     <h2>6. How we share information (sub-processors)</h2>
     <p>We share information only with service providers who help us run the Service, under contracts that require them to protect it. Our key sub-processors are:</p>
     <ul>
       <li><strong>Supabase</strong> &mdash; secure database and authentication.</li>
       <li><strong>Vercel</strong> &mdash; application hosting.</li>
-      <li><strong>Postmark</strong> &mdash; sending transactional email.</li>
+      <li><strong>Google Workspace</strong> &mdash; sending account and system email from our own address.</li>
       <li><strong>Stripe</strong> &mdash; subscription billing and payments.</li>
       <li><strong>Google</strong> &mdash; Gmail, Google Calendar, and the Gemini API (for connected Google accounts and AI features).</li>
       <li><strong>Microsoft</strong> &mdash; Outlook mail and calendar (for connected Microsoft accounts).</li>
