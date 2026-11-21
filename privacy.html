@@ -111,7 +111,7 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <p>Last updated: 10 November 2026</p>
+    <p>Last updated: 20 November 2026</p>
   </div>
 </section>
 
@@ -153,7 +153,7 @@
     <p>When you choose to connect a Google account, Sy-nc requests the following Google API scopes:</p>
     <ul>
       <li><strong>Gmail (read-only)</strong> &mdash; <code>gmail.readonly</code>: to scan your inbox for incoming job enquiries and import them as leads.</li>
-      <li><strong>Gmail (compose)</strong> &mdash; <code>gmail.compose</code>: to create draft replies in your Gmail for you to review and send.</li>
+      <li><strong>Gmail (compose)</strong> &mdash; <code>gmail.compose</code>: to create draft replies and quotes in your Gmail, and to send those drafts from your Gmail when you click Send in Sy-nc or have switched on automatic follow-ups. Emails are sent from your own account and appear in your Sent folder. Sy-nc never sends email from your account unless you have asked it to.</li>
       <li><strong>Google Calendar</strong> &mdash; <code>calendar</code>: to read your calendar and create events for jobs you book.</li>
     </ul>
     <p>If you connect a Microsoft account, we access your Outlook mail and calendar for the equivalent purposes.</p>
@@ -171,6 +171,13 @@
     <p>If you connect a Facebook Page or Instagram professional account, Sy-nc receives messages sent to that Page or account via Meta&rsquo;s platform, including the sender&rsquo;s name, profile identifiers, and message content. We use this data solely to create and manage leads in your account and to send the replies you write. We do <strong>not</strong> access your personal Facebook or Instagram messages, friends, or feed. Access tokens are encrypted at rest (AES-256-GCM). Message data is retained until you delete the related lead or your account, and is never sold or shared with third parties. AI features (enquiry triage and suggested replies) process message text through our AI provider solely to provide those features; suggested replies are never sent without your explicit action.</p>
     <p><strong>Disconnecting and deletion.</strong> Disconnecting a Page removes Sy-nc&rsquo;s access credentials immediately and stops all message capture. You may delete captured messages and leads at any time in the app, and deleting your Sy-nc account removes all associated data. If you ask Facebook to delete data an app holds about you, Meta notifies our data deletion endpoint and we permanently remove your Facebook connection data and credentials; the status of your request is confirmed at the link Meta provides.</p>
 
+    <h2>4a. Sy-nc Number: calls, voicemail and texts</h2>
+    <p>If you use a Sy-nc Number, calls and texts to that number are carried by our telephony provider, <strong>Telnyx</strong>, under a data processing agreement with data held in the EU where Telnyx offers it. For each call we store the caller&rsquo;s number, the time, how long it lasted and whether it was answered, missed or went to voicemail. Voicemail messages that callers choose to leave are recorded. <strong>Answered calls are recorded only if the business has switched on call recording</strong>; in that case every caller first hears a short notice that the call is recorded, before the call is put through. Recordings are copied into Sy-nc&rsquo;s private storage straight away and transcribed and summarised using Google&rsquo;s paid Gemini API (under which Google does not use the content to train its models), so the caller&rsquo;s name, what they need, where, and what was agreed can be added to the business&rsquo;s record of the enquiry &mdash; Telnyx&rsquo;s own AI features are not used. Recordings are used only to keep an accurate record of enquiries and the work agreed; they are never used to train AI models or for marketing. Texts sent and received on the number, including the automatic &ldquo;sorry we missed your call&rdquo; text, are stored on the related lead. The missed-call text always names your business and is sent only to the number that has just called; anyone who replies STOP is not texted again from that number.</p>
+    <p><strong>Who is responsible.</strong> For calls to a business&rsquo;s Sy-nc Number, that business decides whether calls are recorded and is responsible for the recordings (the data controller); Sy-nc, Telnyx and Google process them on its behalf. A business that switches recording on relies on its legitimate interest in keeping an accurate record of customer enquiries and agreed work.</p>
+    <p><strong>Missed calls answered by an AI assistant.</strong> If a business switches on Sy-nc&rsquo;s AI assistant, calls it cannot answer may be answered by an automated assistant instead of voicemail. The caller is told at the start that they are speaking to an automated assistant and that the call is recorded. The assistant asks for the caller&rsquo;s name, what they need, where, and the best time to call back, and Sy-nc adds this, with a summary and transcript, to the business&rsquo;s record of the enquiry. The live conversation is handled by a specialist AI voice provider based in the United States, under a data processing agreement and the UK International Data Transfer Addendum to the EU Standard Contractual Clauses; that provider keeps its copy of the call for no more than 30 days. Sy-nc&rsquo;s own copy follows the retention period below.</p>
+    <p><strong>Personal callers.</strong> A business can mark numbers that are not customers (for example family or friends). Calls from those numbers are still put through or can leave a message, but they are not recorded, not added to the business&rsquo;s enquiries, not answered by the AI assistant and not texted.</p>
+    <p><strong>Retention.</strong> Call and voicemail recordings and full transcripts are deleted automatically <strong>90 days</strong> after the call. Call details, the short summary and texts stay on the lead until the business deletes the lead or its account. Once a recording has been copied into Sy-nc, the telephony provider&rsquo;s copy is deleted. Callers can ask the business (or us, at hello@sy-nc.co.uk) for a copy of a recording of them, or for it to be deleted sooner.</p>
+
     <h2>5. AI processing</h2>
     <p>To identify which incoming emails are genuine job enquiries and to draft suggested replies, Sy-nc sends the relevant email content (such as the subject, sender, and a short preview) to Google&rsquo;s Gemini API for processing. This is used <strong>only</strong> to provide these features in real time. This content is <strong>not</strong> used to train AI or machine-learning models, consistent with the Limited Use requirements above. Sy-nc uses the paid Gemini API, under which Google does not use prompt content to train or improve its models.</p>
 
@@ -184,6 +191,8 @@
       <li><strong>Google</strong> &mdash; Gmail, Google Calendar, and the Gemini API (for connected Google accounts and AI features).</li>
       <li><strong>Microsoft</strong> &mdash; Outlook mail and calendar (for connected Microsoft accounts).</li>
       <li><strong>Checkatrade</strong> &mdash; if you connect a Checkatrade account to import leads.</li>
+      <li><strong>Telnyx</strong> &mdash; phone numbers, calls, call and voicemail recording, and text messages (if you use a Sy-nc Number).</li>
+      <li><strong>An AI voice provider (United States)</strong> &mdash; answers missed calls on a Sy-nc Number when the business has switched on the AI assistant; transfers are covered by the UK International Data Transfer Addendum. Details are available on request from hello@sy-nc.co.uk.</li>
     </ul>
     <p>We may also disclose information where required by law, or to protect the rights, safety, and security of Sy-nc and its users.</p>
 
